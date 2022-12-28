@@ -41,8 +41,9 @@ function ImageReveal({ selectedImage, closeModal }) {
           .catch(function (error) {
             setIsMintStarted(false);
             if (error.code === "ERR_BAD_REQUEST") {
+              var d = new Date();
               setWalletId(
-                `https://holidaynft.s3.amazonaws.com/livenft/${walletId}.jpg`
+                `https://holidaynft.s3.amazonaws.com/livenft/${walletId}.jpg?v=${d.getTime()}`
               );
               setPolygonScanLink(
                 `https://polygonscan.com/address/${walletId}#tokentxnsErc721`
