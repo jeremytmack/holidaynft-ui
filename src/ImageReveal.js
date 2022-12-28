@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Axios from "axios";
 //const API_BASE_URL = "http://localhost:8080";
-const API_BASE_URL = "http://jeremymack.com";
+const API_BASE_URL =
+  "https://cug34wa55qbaae4zpgcchq7wbq0odurt.lambda-url.us-east-1.on.aws";
 function ImageReveal({ selectedImage, closeModal }) {
   const [isOpenGift, setOpenGift] = useState(false);
   const [transactionUrl, setTransactionUrl] = useState();
@@ -27,8 +28,9 @@ function ImageReveal({ selectedImage, closeModal }) {
         walletId = wallet[0];
 
         // if they did not, generate an nft!
-        Axios.post(`${API_BASE_URL}/api/updateimage/${walletId}`, {
+        Axios.post(`${API_BASE_URL}/api/updateimage`, {
           image: selectedImage,
+          walletId: walletId,
         })
           .then(function (response) {
             setIsMintStarted(false);
