@@ -8,8 +8,10 @@ const API_BASE_URL =
 
 function App() {
   const [isShown, setIsShown] = useState(false);
+  const [isStarted, setIsStarted] = useState(false);
   const [selectedImage, setNftImage] = useState();
   const start = () => {
+    setIsStarted(true);
     Axios.get(`${API_BASE_URL}/api/getimages`).then((res) => {
       let images = res.data;
       let randomImage = images[Math.floor(Math.random() * images.length)];
@@ -26,7 +28,23 @@ function App() {
           <h3>
             <span>Check your volume ;)</span>
           </h3>
-          <button onClick={start}>START</button>
+
+          {!isStarted && <button onClick={start}>START</button>}
+          {isStarted && (
+            <div class="ring">
+              <div class="preloader">
+                <div class="preloader__stripe"></div>
+                <div class="preloader__stripe"></div>
+                <div class="preloader__stripe"></div>
+                <div class="preloader__stripe"></div>
+                <div class="preloader__stripe"></div>
+                <div class="preloader__stripe"></div>
+                <div class="preloader__stripe"></div>
+                <div class="preloader__stripe"></div>
+              </div>
+              <h3>Loading...</h3>
+            </div>
+          )}
           <div className="modal-txt-sm">
             Please view this app on desktop for the best experience. I did not
             optimize for any mobile or table AT ALL ;){" "}
