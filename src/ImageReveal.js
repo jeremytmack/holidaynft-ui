@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 //const API_BASE_URL = "http://localhost:8080";
 const API_BASE_URL =
-  "https://blz3fhubd5.execute-api.us-east-1.amazonaws.com/PROD/";
+  "https://8oh0tukq3j.execute-api.us-east-1.amazonaws.com/live/nft";
 function ImageReveal({ selectedImage, closeModal }) {
   const [isOpenGift, setOpenGift] = useState(false);
   const [transactionUrl, setTransactionUrl] = useState();
