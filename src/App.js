@@ -2,7 +2,7 @@ import "./App.css";
 import TheShow from "./TheShow.js";
 import React, { useState } from "react";
 import Axios from "axios";
-let audio = new Audio("/alliwant.mp3");
+let audio = new Audio("https://holidaynft.s3.amazonaws.com/alliwant.mp3");
 const API_BASE_URL =
   "https://cug34wa55qbaae4zpgcchq7wbq0odurt.lambda-url.us-east-1.on.aws";
 

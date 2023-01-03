@@ -7,7 +7,7 @@ import TreeDay from "./TreeDay.gif";
 import SwitchDay from "./btnDay.gif";
 import SwitchNight from "./btnNight.gif";
 import Moon from "./moon.png";
-let beep = new Audio("/beep.mp3");
+let beep = new Audio("https://holidaynft.s3.amazonaws.com/beep.mp3");
 
 function TheShow({ selectedImage }) {
   const [isShown, setIsShown] = useState(false);
