@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 let audio = new Audio("https://holidaynft.s3.amazonaws.com/alliwant.mp3");
 const API_BASE_URL =
-  "https://blz3fhubd5.execute-api.us-east-1.amazonaws.com/PROD/";
+  "https://e8vqcksfa4.execute-api.us-east-1.amazonaws.com/holiday";
 
 function App() {
   const [isShown, setIsShown] = useState(false);
