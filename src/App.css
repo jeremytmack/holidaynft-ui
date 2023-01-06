@@ -8,7 +8,77 @@ canvas {
   top: 0;
   left: 0;
 }
-
+.notes {
+  position: absolute;
+  z-index: 999999;
+  border: 8px red solid;
+  border-radius: 12px;
+  height: 80%;
+  width: 50%;
+  left: 20%;
+  top: 50px;
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  padding: 30px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.notes h1 {
+  font-size: 35px;
+  text-shadow: none;
+  color: #000;
+  font-family: "Luckiest Guy";
+  padding-top: 20px;
+}
+.notes p {
+  padding-top: 4px;
+  margin-top: 4px;
+  margin-left: 20px;
+}
+.notes h2 {
+  font-size: 20px;
+  text-shadow: none;
+  color: #000;
+  font-family: "Luckiest Guy";
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 4px;
+}
+.notes .aws-icon {
+  height: 20px;
+  width: auto;
+  padding-left: 5px;
+  margin-bottom: 0px;
+}
+.notes .architecture {
+  width: 95%;
+  margin-top: 15px;
+}
+.notes-modal-close {
+  background: #fff;
+  border-radius: 50%;
+  border: 6px solid red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 45px;
+  width: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btnNotes {
+  position: absolute;
+  z-index: 999999999;
+  top: 40px;
+  right: 40px;
+  opacity: 0.3;
+  height: auto;
+  width: 40px;
+  cursor: pointer;
+}
 .snowScape {
   position: absolute;
   z-index: 4;

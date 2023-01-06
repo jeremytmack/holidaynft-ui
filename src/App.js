@@ -31,16 +31,16 @@ function App() {
 
           {!isStarted && <button onClick={start}>START</button>}
           {isStarted && (
-            <div class="ring">
-              <div class="preloader">
-                <div class="preloader__stripe"></div>
-                <div class="preloader__stripe"></div>
-                <div class="preloader__stripe"></div>
-                <div class="preloader__stripe"></div>
-                <div class="preloader__stripe"></div>
-                <div class="preloader__stripe"></div>
-                <div class="preloader__stripe"></div>
-                <div class="preloader__stripe"></div>
+            <div className="ring">
+              <div className="preloader">
+                <div className="preloader__stripe"></div>
+                <div className="preloader__stripe"></div>
+                <div className="preloader__stripe"></div>
+                <div className="preloader__stripe"></div>
+                <div className="preloader__stripe"></div>
+                <div className="preloader__stripe"></div>
+                <div className="preloader__stripe"></div>
+                <div className="preloader__stripe"></div>
               </div>
               <h3>Loading...</h3>
             </div>
