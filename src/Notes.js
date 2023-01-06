@@ -225,6 +225,29 @@ function Notes({ showNotes }) {
         Blockchain. Why? Because its free and easy, no other technical reason.
         ;){" "}
       </p>
+      <h1>Nerdy Details</h1>
+      <p>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/jeremytmack/holidaynft-ui"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Holiday NFT App UI Source on GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/jeremytmack/holidaynft-app"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Holiday NFT App API/Lambda Source on GitHub
+            </a>
+          </li>
+        </ul>
+      </p>
     </div>
   );
 }
