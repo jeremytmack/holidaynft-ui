@@ -2,7 +2,7 @@
 
 # What is this?
 
-The Happy Holidays Digital greeting card is a fun React and CSS animation that allows you Mint your very own NFT gift, change the time of day and check out a relaxing Happy Holidays Spotify Playlist!
+The Happy Holidays Digital greeting card is a fun React and CSS animation that allows you Mint your very own NFT gift, change the time of day and check out a relaxing Happy Holidays Spotify Playlist! This UI is powered by the architecture (outlined below). .[The backend serverless app repo can be found here](https://github.com/jeremytmack/holidaynft-app). It might be a good idea to make this a monorepo in the future.
 
 # Architecture
 
@@ -22,33 +22,33 @@ The ReactJS app checks for a MetaMask wallet address via the "ethereum" method a
 
 ## Backend
 
-### AWS: Amplify Amplify
+### AWS: Amplify
 
 The ReactJS app is automatically deployed and served via AWS Amplify. Any changes to the app are deployed upon a successful code merge via the Holiday NFT UI GitHub Repo.
 
-### AWS: Certificate Manager & Route 53Certificate ManagerRoute 53
+### AWS: Certificate Manager & Route 53
 
 TLS Certificates, DNS resolution and routing are all handled via AWS' Route 53 Service
 
-### AWS: Cloudfront Cloudfront
+### AWS: Cloudfront
 
 All requests are pushed through the AWS Cloudfront CDN to assist with speedy response times!
 
-### AWS: API Gateway & Lambda API Gateway +Lambda
+### AWS: API Gateway & Lambda
 
-The dedicated API used for the Holiday NFT app is delivered by way of a serverless function (AWS Lambda) which is exposed and controlled through the AWS API Gateway. All calls to mint and issue NFTs by way of the NFT Port API flow through this gateway and Lambda config. Once the wallet ID is confirmed valid, the digital asset (the cute image) is moved from a temporary S3 home to a permanent S3 home. Once that process is complete, the NFT is minted and delivered to the Wallet Address the user provided by way of linking MetaMask.
+The dedicated API used for the Holiday NFT app is delivered by way of a serverless function (AWS Lambda) which is exposed and controlled through the AWS API Gateway. All calls to mint and issue NFTs by way of the NFT Port API flow through this gateway and Lambda config. Once the wallet ID is confirmed valid, the digital asset (the cute image) is moved from a temporary S3 home to a permanent S3 home. Once that process is complete, the NFT is minted and delivered to the Wallet Address the user provided by way of linking MetaMask. [You can find the Lambda source code here.](https://github.com/jeremytmack/holidaynft-app).
 
-### AWS: S3 & DynamoDB S3 +DynamoDB
+### AWS: S3 & DynamoDB
 
 All digital assetts are stored in S3 for safekeeping. There's a bucket of a finite number of images in available. Once they're gone, no more NFT's can be created. (That, and my free NFTPort trial will have been maxed out)
 
-### NFT Port NFTPort
+### NFT Port
 
 The service that handles accepting the Wallet ID, digital asset address and description, and ultimately mints the NFT and returns the transaction ID to the Lambda (which in turn returns the success response and transaction ID to the UI for display)
 
-### Polygon (MATIC) ChainPolygon
+### Polygon (MATIC) Chain
 
-All NFT's generated through this app
+All NFT's generated through this app are minted on the Polygon Level-2 blockchain. Why? Because it's free! ;)
 
 # How to run the UI
 
