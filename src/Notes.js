@@ -14,7 +14,7 @@ function Notes({ showNotes }) {
         The Happy Holidays Digital greeting card is a fun React and CSS
         animation that allows you Mint your very own NFT gift (click Clark
         Griswold's car), change the time of day (click the day/night button) and
-        check out the fun Happy Holidays Spotify Playlist!
+        check out a relaxing Happy Holidays Spotify Playlist!
       </p>
       <blockquote>
         <h2> Fun features to check out:</h2>
@@ -115,7 +115,11 @@ function Notes({ showNotes }) {
           className="aws-icon"
         />
       </h2>
-      <p>The ReactJS Apps checks</p>
+      <p>
+        The ReactJS app checks for a MetaMask wallet address via the "ethereum"
+        method accessible from the global window object (window.ethereum) thanks
+        to the MetaMask plugin (when it's installed).
+      </p>
       <h2>
         AWS: Certificate Manager & Route 53
         <img
